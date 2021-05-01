@@ -1,18 +1,19 @@
 {
-    "name": "scai/php-rust-rcon",
-    "type": "library",
-    "require": {
-        "textalk/websocket": "^1.5"
-    },
-    "autoload": {
-        "psr-4": {
-            "Scai\\" : "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Alexe Vlad",
-            "email": "alexe.vlad@winehills.ro"
-        }
-    ]
+  "name": "scai/php-rust-rcon",
+  "type": "library",
+  "license": "GNU",
+  "require": {
+    "textalk/websocket": "^1.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Scai\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Alexe Vlad",
+      "email": "alexe.vlad@winehills.ro"
+    }
+  ]
 }
