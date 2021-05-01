@@ -1,7 +1,7 @@
 {
   "name": "scai/php-rust-rcon",
   "type": "library",
-  "license": "GNU",
+  "license": "LGPL-2.1",
   "require": {
     "textalk/websocket": "^1.5"
   },
