@@ -23,7 +23,7 @@ class RustRcon
             'Type' => 3
         );
         $this->client->send(json_encode($data));
-        return array_map('json_decode', json_decode($this->client->receive(), true));
+        return array_map('json_decode', json_decode($this->client->receive(), true), true);
     }
 
     public function getMessage(): array
