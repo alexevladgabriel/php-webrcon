@@ -7,6 +7,8 @@ use WebSocket\Client;
 class RustRcon
 {
     private $client;
+    private $response;
+
     public function __construct(string $ip, int $port, string $pass)
     {
         $this->client = new Client("ws://{$ip}:{$port}/{$pass}");
@@ -22,7 +24,12 @@ class RustRcon
         );
         $this->client->send(json_encode($data));
 
-        return json_decode($this->client->receive(), true);
+        return $this->response = json_decode($this->client->receive(), true);
+    }
+
+    public function GetMessage(): array
+    {
+        return json_decode($this->response["Message"]);
     }
 
     public function __destruct()
