@@ -22,8 +22,12 @@ class RustRcon
             'Stacktrace' => '',
             'Type' => 3
         );
+
         $this->client->send(json_encode($data));
-        return array_map('json_decode', json_decode($this->client->receive(), true), true);
+
+        return array_map(function ($json) {
+            return json_decode($json, true);
+        }, json_decode($this->client->receive(), true));
     }
 
     public function getMessage(): array
