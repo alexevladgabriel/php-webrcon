@@ -12,7 +12,7 @@ class RustRcon
         $this->client = new Client("ws://{$ip}:{$port}/{$pass}");
     }
 
-    public function sendPacket(string $command): mixed
+    public function sendPacket(string $command): array
     {
         $data = array(
             'Identifier' => 1001,
