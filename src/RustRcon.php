@@ -14,7 +14,7 @@ class RustRcon
         $this->client = new Client("ws://{$ip}:{$port}/{$pass}");
     }
 
-    public function sendPacket(string $command): array
+    public function sendPacket(string $command)
     {
         $data = array(
             'Identifier' => 1001,
@@ -23,8 +23,7 @@ class RustRcon
             'Type' => 3
         );
         $this->client->send(json_encode($data));
-
-        return $this->response = json_decode($this->client->receive(), true);
+        $this->response = json_decode($this->client->receive(), true);
     }
 
     public function GetMessage(): array
