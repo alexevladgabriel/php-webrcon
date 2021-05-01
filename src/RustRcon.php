@@ -25,7 +25,7 @@ class RustRcon
 
         $this->client->send(json_encode($data));
 
-        return array_map(function ($json) {
+        return $this->response = array_map(function ($json) {
             return json_decode($json, true);
         }, json_decode($this->client->receive(), true));
     }
