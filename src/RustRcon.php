@@ -32,7 +32,7 @@ class RustRcon
 
     public function getMessage(): array
     {
-        return json_decode($this->response["Message"], true);
+        return $this->response["Message"];
     }
 
     public function __destruct()
