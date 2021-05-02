@@ -6,8 +6,8 @@ use WebSocket\Client;
 
 class RustRcon
 {
-    private $client;
-    private $response;
+    private Client $client;
+    private array $response;
 
     public function __construct(string $ip, int $port, string $pass)
     {
@@ -37,6 +37,6 @@ class RustRcon
 
     public function __destruct()
     {
-        $this->client = null;
+        $this->client->close();
     }
 }
