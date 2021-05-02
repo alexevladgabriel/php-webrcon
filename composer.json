@@ -1,9 +1,12 @@
 {
   "name": "scai/php-rust-rcon",
+  "description": "",
   "type": "library",
   "license": "LGPL-2.1",
   "require": {
-    "textalk/websocket": "^1.5"
+    "php": "^7.4|^8.0",
+    "textalk/websocket": "^1.5",
+    "ext-json": "*"
   },
   "autoload": {
     "psr-4": {
