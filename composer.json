@@ -1,7 +1,12 @@
 {
   "name": "scai/php-rust-rcon",
-  "description": "",
+  "description": "PHP Library to send/receive RCON commands to Rust Servers using WebSockets",
   "type": "library",
+  "keywords": [
+    "rust",
+    "rcon",
+    "websockets"
+  ],
   "license": "LGPL-2.1",
   "require": {
     "php": "^7.4|^8.0",
