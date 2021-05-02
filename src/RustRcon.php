@@ -6,8 +6,8 @@ use WebSocket\Client;
 
 class RustRcon
 {
-    private Client $client;
-    private array $response;
+    private $client;
+    private $response;
 
     public function __construct(string $ip, int $port, string $pass)
     {
