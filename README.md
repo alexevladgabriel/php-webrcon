@@ -1,32 +1,25 @@
-# a
+# WebRcon
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/php-webrcon/php-webrcon.svg?style=flat-square)](https://packagist.org/packages/php-webrcon/php-webrcon)
-[![Tests](https://github.com/php-webrcon/php-webrcon/actions/workflows/run-tests.yml/badge.svg?branch=main)](https://github.com/php-webrcon/php-webrcon/actions/workflows/run-tests.yml)
-[![Total Downloads](https://img.shields.io/packagist/dt/php-webrcon/php-webrcon.svg?style=flat-square)](https://packagist.org/packages/php-webrcon/php-webrcon)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/scai/php-webrcon.svg?style=flat-square)](https://packagist.org/packages/scai/php-webrcon)
+[![Tests](https://github.com/alexevladgabriel/php-webrcon/actions/workflows/run-tests.yml/badge.svg?branch=main)](https://github.com/alexevladgabriel/php-webrcon/actions/workflows/run-tests.yml)
+[![Total Downloads](https://img.shields.io/packagist/dt/scai/php-webrcon.svg?style=flat-square)](https://packagist.org/packages/scai/php-webrcon)
 
-This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/php-webrcon.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/php-webrcon)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+PHP library to send & receive commands from rust server based on websocket client.
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require php-webrcon/php-webrcon
+composer require scai/php-webrcon
 ```
 
 ## Usage
 
 ```php
-$skeleton = new Scai\WebRcon();
-echo $skeleton->echoPhrase('Hello, Scai!');
+$rcon = new Scai\WebRcon\WebRconClass('IP', PORT, 'RCON PASSWORD');
+$rcon->command('serverinfo');
+$data = $rcon->receive();
 ```
 
 ## Testing
@@ -49,7 +42,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [Alexe Vlad](https://github.com/Scai)
+- [Alexe Vlad](https://github.com/alexevladgabriel)
 - [All Contributors](../../contributors)
 
 ## License
