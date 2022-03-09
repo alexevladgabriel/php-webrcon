@@ -1,35 +1,43 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "scai/php-webrcon",
+    "description": "PHP library to send & receive commands from rust server based on websocket client.",
     "keywords": [
-        ":vendor_name",
-        ":package_slug"
+        "scai",
+        "php-webrcon",
+        "webrcon",
+        "rust",
+        "rcon",
+        "source",
+        "websockets"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/alexevladgabriel/php-webrcon",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Alexe Vlad",
+            "email": "contact@alexevlad.me",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.0"
+        "php": "^7.4|^8.0",
+        "textalk/websocket": "^1.5",
+        "ext-json": "*"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.0",
         "pestphp/pest": "^1.20",
+        "pestphp/pest-plugin-mock": "^1.0",
         "spatie/ray": "^1.28"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src"
+            "Scai\\WebRcon\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Scai\\WebRcon\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -38,7 +46,10 @@
         "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true
