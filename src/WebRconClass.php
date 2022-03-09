@@ -17,7 +17,7 @@ class WebRconClass
      */
     private array $response = [];
 
-    const LAST_INDEX = 1001;
+    public const LAST_INDEX = 1001;
 
     /**
      * @param string $ip
@@ -38,11 +38,11 @@ class WebRconClass
      */
     public function command(string $command, int $identifier = self::LAST_INDEX, string $name = "WebRcon"): array
     {
-        $this->client->send(json_encode(array(
+        $this->client->send(json_encode([
             'Identifier' => $identifier,
             'Message' => $command,
-            'Name' => $name
-        )));
+            'Name' => $name,
+        ]));
 
         return $this->response = array_map(function ($json) {
             return json_decode($json, true);
