@@ -3,7 +3,6 @@
 namespace Scai\WebRcon;
 
 use Illuminate\Log;
-use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 use WebSocket\Client;
 
