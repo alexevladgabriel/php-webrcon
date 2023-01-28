@@ -20,15 +20,17 @@
         }
     ],
     "require": {
-        "php": "^7.4|^8.0",
-        "textalk/websocket": "^1.5",
-        "ext-json": "*"
+        "php": ">=8",
+        "ext-json": "*",
+        "illuminate/log": "^9.48",
+        "monolog/monolog": "^2.8",
+        "phrity/websocket": "^1.6"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.0",
-        "pestphp/pest": "^1.20",
-        "pestphp/pest-plugin-mock": "^1.0",
-        "spatie/ray": "^1.28"
+        "friendsofphp/php-cs-fixer": "^v3.13.2",
+        "pestphp/pest": "^1.22",
+        "pestphp/pest-plugin-mock": "^v1.0.3",
+        "symfony/var-dumper": "^6.0"
     },
     "autoload": {
         "psr-4": {
