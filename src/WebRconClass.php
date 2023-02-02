@@ -2,8 +2,7 @@
 
 namespace Scai\WebRcon;
 
-use Illuminate\Log;
-use Monolog\Handler\StreamHandler;
+use Monolog\Handler\BrowserConsoleHandler;
 use Monolog\Logger;
 use WebSocket\Client;
 
@@ -16,7 +15,7 @@ class WebRconClass
      */
     private Client $client;
 
-    private Log\Logger $logger;
+    private Logger $logger;
 
     private bool $debug = false;
 
@@ -24,7 +23,8 @@ class WebRconClass
     {
         if ($debug) {
             $this->debug = true;
-            $this->logger = new Log\Logger(new Logger('Players Module'));
+            $this->logger = new Logger('player_manager');
+            $this->logger->pushHandler(new BrowserConsoleHandler());
         }
     }
 
@@ -64,7 +64,7 @@ class WebRconClass
         ]));
 
         if ($this->debug) {
-            $this->logger->info("running $command on ".$this->client->getRemoteName());
+            $this->logger->debug("running $command on ".$this->client->getRemoteName());
         }
     }
 
@@ -78,7 +78,7 @@ class WebRconClass
         }, json_decode($this->client->receive(), true));
 
         if ($this->debug) {
-            $this->logger->info('Response', $response);
+            $this->logger->debug('Response', [$response]);
         }
 
         return $response;
