@@ -2,8 +2,8 @@
 
 namespace Scai\WebRcon;
 
-
 use Monolog\Handler\BrowserConsoleHandler;
+
 class WebRconClass
 {
     public const LAST_INDEX = 1001;
