@@ -2,14 +2,8 @@
 
 namespace Scai\WebRcon;
 
-<<<<<<< HEAD
-use Monolog\Handler\BrowserConsoleHandler;
-=======
-use Illuminate\Log;
->>>>>>> refs/remotes/origin/master
-use Monolog\Logger;
-use WebSocket\Client;
 
+use Monolog\Handler\BrowserConsoleHandler;
 class WebRconClass
 {
     public const LAST_INDEX = 1001;
