@@ -17,8 +17,9 @@ composer require scai/php-webrcon
 ## Usage
 
 ```php
-$rcon = new Scai\WebRcon\WebRconClass('IP', PORT, 'RCON PASSWORD');
-$rcon->command('serverinfo');
+$rcon = new Scai\WebRcon\WebRconClass();
+$rcon->connect('IP', RCON_PORT, 'RCON_PASSWORD');
+$rcon->send('serverinfo');
 $data = $rcon->receive();
 ```
 

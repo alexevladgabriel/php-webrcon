@@ -2,7 +2,11 @@
 
 namespace Scai\WebRcon;
 
+<<<<<<< HEAD
 use Monolog\Handler\BrowserConsoleHandler;
+=======
+use Illuminate\Log;
+>>>>>>> refs/remotes/origin/master
 use Monolog\Logger;
 use WebSocket\Client;
 
