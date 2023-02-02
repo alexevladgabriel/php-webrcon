@@ -2,8 +2,10 @@
 
 namespace Scai\WebRcon;
 
-
 use Monolog\Handler\BrowserConsoleHandler;
+use Monolog\Logger;
+use WebSocket\Client;
+
 class WebRconClass
 {
     public const LAST_INDEX = 1001;
