@@ -15,4 +15,7 @@ it('can receive commands', function () use ($rcon) {
     $rcon->send('serverinfo');
     $rcon->receive();
     expect($rcon->receive())->toBeArray();
+    $rcon->send('status');
+    $rcon->receive();
+    expect($rcon->receive())->toBeArray();
 })->depends('it connect successfully to server');
