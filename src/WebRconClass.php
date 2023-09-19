@@ -49,9 +49,9 @@ class WebRconClass
         /**
          * The library used require to send a text message to connect to websocket instead
          */
-//        if (! $this->client->isConnected()) {
-//            return;
-//        }
+        //        if (! $this->client->isConnected()) {
+        //            return;
+        //        }
 
         if ($identifier == null) {
             $identifier = -1;
